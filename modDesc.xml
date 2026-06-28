@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="97">
+    <author>Yanni_X and Claude</author>
+    <version>0.4.0</version>
+
+    <title>
+        <en>Price Favorites</en>
+        <de>Preis-Favoriten</de>
+    </title>
+
+    <description>
+        <en><![CDATA[Adds a "Favorites" segment to the top of the Prices page. Press the "Favorit" button to favorite/unfavorite the highlighted fill type. Favorites are saved per player and shared across all your savegames. Favorited goods stay in their original segment too.]]></en>
+        <de><![CDATA[Fügt oben in der Preise-Seite ein „Favoriten"-Segment hinzu. Mit der „Favorit"-Taste die markierte Frucht/Ware als Favorit umschalten. Favoriten werden pro Spieler gespeichert und gelten für alle Spielstände. Favorisierte Waren bleiben auch in ihrem ursprünglichen Segment.]]></de>
+    </description>
+
+    <multiplayer supported="true" />
+    <iconFilename>modIcon.dds</iconFilename>
+
+    <l10n>
+        <text name="input_PRICEFAV_TOGGLE">
+            <en>Toggle price favorite</en>
+            <de>Preis-Favorit umschalten</de>
+        </text>
+    </l10n>
+
+    <actions>
+        <action name="PRICEFAV_TOGGLE" />
+    </actions>
+    <inputBinding>
+        <actionBinding action="PRICEFAV_TOGGLE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_f" />
+        </actionBinding>
+    </inputBinding>
+
+    <extraSourceFiles>
+        <sourceFile filename="PriceFavorites.lua" />
+    </extraSourceFiles>
+</modDesc>
