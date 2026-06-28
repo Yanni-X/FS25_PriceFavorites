@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="97">
     <author>Yanni_X and Claude</author>
-    <version>0.4.1</version>
+    <version>0.4.3</version>
 
     <title>
         <en>Price Favorites</en>
@@ -9,8 +9,22 @@
     </title>
 
     <description>
-        <en><![CDATA[Adds a "Favorites" segment to the top of the Prices page. Press the "Favorit" button to favorite/unfavorite the highlighted fill type. Favorites are saved per player and shared across all your savegames. Favorited goods stay in their original segment too.]]></en>
-        <de><![CDATA[Fügt oben in der Preise-Seite ein „Favoriten"-Segment hinzu. Mit der „Favorit"-Taste die markierte Frucht/Ware als Favorit umschalten. Favoriten werden pro Spieler gespeichert und gelten für alle Spielstände. Favorisierte Waren bleiben auch in ihrem ursprünglichen Segment.]]></de>
+        <en><![CDATA[Tired of scrolling the Prices page to find the goods you actually sell?
+
+Price Favorites adds a "Favorites" segment pinned to the top of the Prices list (in-game menu > Statistics > Prices). Highlight a good and press the "Favorit" button (default key: F) to add or remove it. Your favorites jump to the top - while still remaining in their original segment, so nothing is hidden.
+
+- Favorites segment at the top of the Prices list
+- Toggle with a key or the on-screen button
+- Saved per player, shared across all your savegames
+- Favorited goods stay in their original segment too]]></en>
+        <de><![CDATA[Genervt vom Scrollen in der Preise-Seite, um die Waren zu finden, die du wirklich verkaufst?
+
+Preis-Favoriten fügt oben in der Preisliste ein „Favoriten"-Segment hinzu (Menü > Statistik > Preise). Markiere eine Ware und drücke die „Favorit"-Taste (Standard: F), um sie hinzuzufügen oder zu entfernen. Deine Favoriten springen nach oben - bleiben aber auch in ihrem ursprünglichen Segment, es wird also nichts ausgeblendet.
+
+- Favoriten-Segment oben in der Preisliste
+- Umschalten per Taste oder Bildschirm-Button
+- Pro Spieler gespeichert, für alle Spielstände
+- Favorisierte Waren bleiben auch in ihrem ursprünglichen Segment]]></de>
     </description>
 
     <multiplayer supported="true" />
@@ -33,6 +47,6 @@
     </inputBinding>
 
     <extraSourceFiles>
-        <sourceFile filename="PriceFavorites.lua" />
+        <sourceFile filename="scripts/PriceFavorites.lua" />
     </extraSourceFiles>
 </modDesc>

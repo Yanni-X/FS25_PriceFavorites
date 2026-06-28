@@ -260,7 +260,7 @@ function PriceFavorites:loadMap(name)
         fc.getMenuButtonInfo = Utils.overwrittenFunction(fc.getMenuButtonInfo, PriceFavorites.getMenuButtonInfo)
     end
 
-    print(LOG .. "v0.4.1 installed")
+    print(LOG .. "v0.4.3 installed")
 end
 
 addModEventListener(PriceFavorites)
