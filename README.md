@@ -79,8 +79,8 @@ prompt in the bottom button-bar toggles the highlighted good.
 ## Compatibility
 
 - **Game:** Farming Simulator 25 (developed/tested on game version 1.20).
-- **Multiplayer:** supported; favorites are stored locally per player (each
-  player keeps their own list). *Note: dedicated-server play is not yet tested.*
+- **Multiplayer:** supported and tested on a dedicated server. Favorites are
+  stored locally per player, so each player keeps their own list.
 
 ## Contributing
 
