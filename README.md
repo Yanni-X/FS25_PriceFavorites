@@ -107,6 +107,9 @@ likely to break on game updates).
 
 ## License
 
-> _TODO (Yanni_X): add a `LICENSE` file and state it here._ The intent is
-> maximally permissive — reuse freely, no permission needed, credit appreciated
-> but not required (see [Contributing](#contributing)).
+Released into the **public domain** under [**CC0 1.0 Universal**](LICENSE) —
+reuse, modify, and redistribute freely, for any purpose, no permission needed.
+Credit is appreciated but **not required** (see [Contributing](#contributing)).
+
+The `docs/screenshot.png` is an in-game screenshot and remains the property of
+GIANTS Software; it is not covered by the CC0 dedication.
