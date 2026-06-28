@@ -174,6 +174,8 @@ function PriceFavorites.onToggle(frame)
     if type(item) ~= "table" or item.name == nil then
         return
     end
+
+    local hadFavorites = hasAnyFavorite()
     if PriceFavorites.favorites[item.name] then
         PriceFavorites.favorites[item.name] = nil
     else
@@ -181,13 +183,26 @@ function PriceFavorites.onToggle(frame)
     end
     PriceFavorites.save()
 
+    -- Adding the first favorite prepends a section (shift +1); removing the last
+    -- removes it (shift -1). Keep the cursor on the same item across that shift.
+    local hasFavorites = hasAnyFavorite()
+    local delta = (hasFavorites and not hadFavorites) and 1
+        or (hadFavorites and not hasFavorites) and -1 or 0
+
+    local list = frame.__pfRowList
+    local selSection = list ~= nil and list.selectedSectionIndex or nil
+    local selIndex = list ~= nil and list.selectedIndex or nil
+
     -- Rebuild the whole prices table so rows, cells and update() state stay in
     -- sync (syncFavSection runs inside rebuildTable via our prepend hook).
     if type(frame.rebuildTable) == "function" then
         pcall(function() frame:rebuildTable() end)
     end
-    if frame.__pfRowList ~= nil then
-        pcall(function() frame.__pfRowList:reloadData() end)
+    if list ~= nil then
+        pcall(function() list:reloadData() end)
+        if delta ~= 0 and selSection ~= nil then
+            pcall(function() list:setSelectedItem(math.max(1, selSection + delta), selIndex or 1) end)
+        end
     end
 end
 
@@ -245,7 +260,7 @@ function PriceFavorites:loadMap(name)
         fc.getMenuButtonInfo = Utils.overwrittenFunction(fc.getMenuButtonInfo, PriceFavorites.getMenuButtonInfo)
     end
 
-    print(LOG .. "v0.4.0 installed")
+    print(LOG .. "v0.4.1 installed")
 end
 
 addModEventListener(PriceFavorites)
