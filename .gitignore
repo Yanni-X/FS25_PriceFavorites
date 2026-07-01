@@ -1,3 +1,6 @@
+# game logs
+logs/
+
 # Build artifacts
 *.zip
 
